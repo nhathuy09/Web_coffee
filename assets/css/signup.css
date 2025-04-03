@@ -161,6 +161,7 @@ fieldset{
   width: 360px;
   text-align: center;
   font-family: 'Poppins';
+  line-height: 1.68;
 }
 .logn-up__desc a{
   color:#697565;

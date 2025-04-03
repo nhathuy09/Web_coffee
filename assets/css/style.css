@@ -33,7 +33,6 @@ a{
     top: -30px;
 }
 .menu-bar{
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,6 +40,7 @@ a{
     padding: 40px;
    
 }
+
 .menu-bar__list {
     display: flex;
     gap: 50px;
@@ -106,6 +106,7 @@ a{
     color: #AB886D;
     margin-bottom: 32px;
     width: 565px;
+    line-height: 1.77;
 }
 .slogan{
     font-weight: 600;
@@ -184,6 +185,9 @@ justify-content: center;
     color:#fff ;
     line-height: 1.78;
 }
+.footer-about{
+    line-height: 1.78;
+}
 .about-logo .logo{
     margin-top: 85px;
     margin-left: 155px;
@@ -213,11 +217,17 @@ justify-content: center;
     font-family: 'sans-serif';
     line-height: 1.78;
 }
+.footer-link__item a{
+    color:#fff ;
+    font-size: 1.6rem;
+    font-family: 'sans-serif';
+    line-height: 1.78;
+}
 .footer-list__item .footer-link__item:last-child{
     margin-bottom: 32px;
 }
 .contact-footer .desc{
-    width: 424px;
+  
     color:#fff ;
     font-size: 1.6rem;
     font-family: 'sans-serif';
@@ -240,6 +250,7 @@ justify-content: center;
     font-weight: 400;
     margin-top: 20px;
     font-family: 'Poppins';
+    line-height: 1.77;
 }
 .get-info__icon{
     display: flex;
