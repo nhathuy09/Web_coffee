@@ -195,7 +195,7 @@
      }
     video{
         width: 100%;
-        margin: -60px auto -100px;
+        margin: -70px auto -100px;
     }
     .item__pr-img{
         width: 100%;
@@ -226,18 +226,21 @@
 .form-mobile{
  width: 358px;
  height: 538px;
- left: 10px;
+left: 8px ;
  
 }
 .content-mobile{
     margin-top: 10px;
 }
-.form-desc{
-    
-}
 .title{
     display: none;
 }
+/* phần map  */
+iframe{
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
 }
-/* ẩn */
+
+}
 
