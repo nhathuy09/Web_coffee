@@ -15,9 +15,9 @@
     display: none;
   }
   /* 2. Chuyển thanh logo vào giữ */
-  .logo {
+  .responsive-logo {
     width: 200px;
-    margin-left: 9%;
+    margin-left: 25%;
   }
 
   /* 3. Code phần bars */
