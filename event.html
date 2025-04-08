@@ -8,6 +8,8 @@
      <link rel="stylesheet" href="./assets/css/reset.css">
      <!-- style -->
       <link rel="stylesheet" href="./assets/css/style.css">
+      <!-- event css -->
+       <link rel="stylesheet" href="./assets/css/event.css">
       <!-- responsive -->
        <link rel="stylesheet" href="./assets/css/responsive.css">
        <!-- AOS -->
@@ -15,35 +17,193 @@
     <title>Document</title>
 </head>
 <body>
-     <!-- ===================header================= -->
-     <div class="header">
-                
+  
+    <!-- ===================header================= -->
+    <div class="header">
         <!-- menu-bar -->
-         <div class="menu-bar">
-            <img src="./assets/img/logo.png" alt="logo" class="logo">
-            <ul class="menu-bar__list">
-                <li class="menu-bar__link">
+        <div class="menu-bar">
+              <img src="./assets/img/logo.png" alt="logo" class="logo" />
+              <nav class="nav">
+                <ul class="menu-bar__list" id="menu-list">
+                  <li class="menu-bar__link">
                     <a href="./index.html">Home</a>
-                </li>
-                <li class="menu-bar__link">
-                    <a href="./about.html">ABout</a>
-                </li>
-                <li class="menu-bar__link">
-                    <a href="./menu.html">Menu</a>
-                </li>
-                <li class="menu-bar__link">
-                    <a href="./event.html">Event</a>
-                </li>
-               
-            </ul>
-            <div class="log-in">
+                  </li>
+                  <li class="menu-bar__link">
+                    <label for="menu"><a href="./about.html">About</a></label>
+                  </li>
+                  <li class="menu-bar__link">
+                    <label for="menu"> <a href="./menu.html">Menu</a></label>
+                  </li>
+                  <li class="menu-bar__link">
+                    <label for="menu"><a href="./event.html">Event</a></label>
+                  </li>
+                </ul>
+              </nav>
+              <div class="log-in">
                 <a href="./login.html" class="sign-in log">Sign In</a>
                 <a href="./signup.html" class="sign-up log">Sign Up</a>
+              </div>
+         </div>
+           <!-- tablet/mobile header -->
+   
+           <div class="mobile-header">
+              <!-- tablet/mobile menu -->
+              <input
+                 hidden
+                type="checkbox"
+                name="menu-checkbox"
+                id="menu-checkbox"
+                class="menu-checkbox"
+              />
+              <label for="menu-checkbox">
+                <svg
+                  class="menu-header__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    fill="currentcolor"
+                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                  />
+                </svg>
+              </label>
+              <!-- overlay -->
+              <label for="menu-checkbox" class="menu-overlay"></label>
+              <!-- menu-content -->
+              <div class="menu-drawer">
+                <!-- menuTop -->
+                <div class="menu-drawer__top">
+                  
+                  <!-- icon close menu -->
+                 <label for="menu-checkbox">
+          
+                    <svg class="close__menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentcolor"
+                        d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+                      />
+                    </svg>
+                 </label>
+                </div>
+                <!-- nav mobile -->
+                <ul id="navbar__list--mobile"></ul>
+                <!-- sử dụng js để copy navbar -->
+                <script>
+                  const navPc = document.querySelector("#menu-list");
+                  const navMobile = document.querySelector("#navbar__list--mobile");
+                  //sao chép
+                  navMobile.innerHTML = navPc.innerHTML;
+                </script>
+                <!-- ngăn cách -->
+                 <div class="separate"></div>
+                 <!-- cta-action -->
+                 <div class="show-login__mobile">
+                  <a href="./login.html" class="sign-in log">Sign In</a>
+                  <a href="./signup.html" class="sign-up log">Sign Up</a>
+                </div>
+              </div>
             </div>
-    </div>
-</div>
+        </div>
 
-
+        <!--Main  -->
+      <main>
+       
+          <h2 class="heading-event">Tin Tức & Sự Kiện </h2>
+          <div class="main-event">
+            <div class="event-box">
+              <!-- item 1 -->
+              <div class="event-item">
+                 <a href="#!"> <img src="./assets/img/matcha.jpg" alt="matcha" class="event-img"></a>
+                  <p class="event-desc">MACCHIATO CHO RA MẮT DÒNG SẢN PHẨM MỚI CÓ TÊN MACCHIATO DRAMA </p>
+                  <p class="desc-date">ON: 01/04/2025</p>
+                  <p class="desc">Đây là dòng sản phẩm được lấy</p>
+                  <span class="more-link">
+                    <a href="#!">Xem thêm →</a>
+                  </span>
+              </div>
+              <!-- item 2 -->
+              <div class="event-item">
+                 <a href="#!"> <img src="./assets/img/capuchino_coffe.jpg" alt="Capuchino" class="event-img"></a>
+                  <p class="event-desc">MỘT LY MACCHIATO VÀO BUỔI SÁNG GIÚP TỈNH TÁO VÀ THƯ GIÃN TRƯỚC KHI BẮT ĐẦU CÔNG VIỆC</p>
+                  <p class="desc-date">ON:31/03/2025</p>
+                  <p class="desc">Vào mỗi buổi sáng trước khi bắt đầu giờ làm</p>
+                  <span class="more-link">
+                    <a href="#!">Xem thêm →</a>
+                  </span>
+              </div>
+              <!-- item 3 -->
+              <div class="event-item">
+                 <a href="#!"> <img src="./assets/img/event1.jpg" alt="" class="event-img"></a>
+                  <p class="event-desc">NHÂN DỊP 30/4 GIẢM 10% CHO KHÁCH HÀNG KHI MUA MACCHIATO TẠI CỬA HÀNG</p>
+                  <p class="desc-date">ON: 30/4/2025</p>
+                  <p class="desc">Kỷ niệm 50 năm ngày thống nhất Đất Nước</p>
+                  <span class="more-link">
+                    <a href="#!">Xem thêm →</a>
+                  </span>
+              </div>
+              <!-- item 4 -->
+              <div class="event-item">
+                 <a href="#!"> <img src="./assets/img/when_cofffe.jpg" alt="" class="event-img"></a>
+                  <p class="event-desc">KHI NÀO CHÚNG TA NÊN THƯỞNG THỨC MACCHIATO ?</p>
+                  <p class="desc-date">ON: 24/03/2025</p>
+                  <p class="desc">Ai cũng muốn uống gì đó trong những lúc làm việc căng thẳng hay stress</p>
+                  <span class="more-link">
+                    <a href="#!">Xem thêm →</a>
+                  </span>
+              </div>
+              <!-- item 5 -->
+              <div class="event-item">
+                 <a href="#!"> <img src="./assets/img/cake_with_coffee.jpg" alt="" class="event-img"></a>
+                  <p class="event-desc">THƯỞNG THỨC MACCHIATO CÙNG VỚI BÁNH TẠI SAO KHÔNG?
+                  <p class="desc-date">ON: 22/03/2025</p>
+                  <p class="desc">Để thưởng thức một ly macchiato ngon tại sao các bạn không</p>
+                  <span class="more-link">
+                    <a href="#!">Xem thêm →</a>
+                  </span>
+              </div>
+              <!-- item 6 -->
+              <div class="event-item">
+                <a href="#!">  <img src="./assets/img/Why_coffee.jpg" alt="" class="event-img"></a>
+                  <p class="event-desc">TẠI SAO GIỚI TRẺ HIỆN NAY LẠI THÍCH UỐNG MACCHIATO?</p>
+                  <p class="desc-date">ON: 20/03/2025</p>
+                  <p class="desc">Giới trẻ hiện nay đang có xu hướng uống macchiato hơn trà sữa bởi vì</p>
+                  <span class="more-link">
+                    <a href="#!">Xem thêm →</a>
+                  </span>
+                  
+              </div>
+          </div>
+          <div class="latest-posts">
+            <h2>Bài viết mới</h2>
+            <ul>
+              <li>
+               <a href="#!"> <p class="lp-desc">• MACCHIATO CHO RA MẮT DÒNG SẢN PHẨM MỚI CÓ TÊN MACCHIATO DRAMA</p></a>
+                <p class="post-date">01/04/2025</p>
+              </li>
+              <li>
+               <a href="#!"> <p class="lp-desc">• MỘT LY MACCHIATO VÀO BUỔI SÁNG GIÚP TỈNH TÁO VÀ THƯ GIÃN TRƯỚC KHI BẮT ĐẦU CÔNG VIỆC</p></a>
+                <p class="post-date">31/03/2025</p>
+              </li>
+              <li>
+               <a href="#!"> <p class="lp-desc">• NHÂN DỊP 26/03 GIẢM 10% CHO KHÁCH HÀNG KHI MUA MACCHIATO TẠI CỬA HÀNG</p></a>
+                <p class="post-date">26/03/2025</p>
+              </li>
+              <li>
+                <a href="#!"><p class="lp-desc">• KHI NÀO CHÚNG TA NÊN THƯỞNG THỨC MACCHIATO ?</p></a>
+                <p class="post-date">24/03/2025</p>
+              </li>
+              <li>
+               <a href="#!"> <p class="lp-desc">• THƯỞNG THỨC MACCHIATO CÙNG VỚI BÁNH TẠI SAO KHÔNG? </p></a>
+                <p class="post-date">22/03/2025</p>
+              </li>
+              <li>
+               <a href="#!"> <p class="lp-desc">• TẠI SAO GIỚI TRẺ HIỆN NAY LẠI THÍCH UỐNG MACCHIATO? </p></a>
+                <p class="post-date">20/03/2025</p>
+              </li>
+            </ul>
+          </div>
+          </div>
+       
+      </main>
    <!-- =================footer================ -->
    <footer class="footer">
     <div class="main-content">

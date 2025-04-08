@@ -8,6 +8,8 @@
      <link rel="stylesheet" href="./assets/css/reset.css">
      <!-- style -->
       <link rel="stylesheet" href="./assets/css/style.css">
+      <!-- css about -->
+       <link rel="stylesheet" href="./assets/css/about.css">
       <!-- responsive -->
        <link rel="stylesheet" href="./assets/css/responsive.css">
        <!-- AOS -->
@@ -15,90 +17,318 @@
     <title>Document</title>
 </head>
 <body>
-     <!-- ===================header================= -->
-     <div class="header">
-                
+       <!-- ===================header================= -->
+       <div class="header">
         <!-- menu-bar -->
-         <div class="menu-bar">
-            <img src="./assets/img/logo.png" alt="logo" class="logo">
-            <ul class="menu-bar__list">
-                <li class="menu-bar__link">
+        <div class="menu-bar">
+              <img src="./assets/img/logo.png" alt="logo" class="logo" />
+              <nav class="nav">
+                <ul class="menu-bar__list" id="menu-list">
+                  <li class="menu-bar__link">
                     <a href="./index.html">Home</a>
-                </li>
-                <li class="menu-bar__link">
-                    <a href="./about.html">ABout</a>
-                </li>
-                <li class="menu-bar__link">
-                    <a href="./menu.html">Menu</a>
-                </li>
-                <li class="menu-bar__link">
-                    <a href="./event.html">Event</a>
-                </li>
-               
-            </ul>
-            <div class="log-in">
+                  </li>
+                  <li class="menu-bar__link">
+                    <label for="menu"><a href="./about.html">About</a></label>
+                  </li>
+                  <li class="menu-bar__link">
+                    <label for="menu"> <a href="./menu.html">Menu</a></label>
+                  </li>
+                  <li class="menu-bar__link">
+                    <label for="menu"><a href="./event.html">Event</a></label>
+                  </li>
+                </ul>
+              </nav>
+              <div class="log-in">
                 <a href="./login.html" class="sign-in log">Sign In</a>
                 <a href="./signup.html" class="sign-up log">Sign Up</a>
-            </div>
-    </div>
-</div>
-
-
-   <!-- =================footer================ -->
-   <footer class="footer">
-    <div class="main-content">
-        <div class="footer-top">
-            <div class="footer-content">
-                <div class="about-logo">
-                    <img src="./assets/img/logo.png" alt="logo" class="logo">
-                    <p class="about">VỀ CHÚNG TÔI</p>
-                    <p class="footer-about">Macchiato - HÀNH TRÌNH CHINH PHỤC PHONG VỊ MỚI
-                        Macchiato không ngừng theo đuổi sứ mệnh mang phong vị mới từ những vùng đất trứ danh tại Việt Nam và trên thế giới đến khách hàng.</p>
-                   
-                    </div>
-            </div>
-            <div class="contact-footer">
-                <ul class="footer-list">
-                    <li class="footer-link"><p class="footer-link-content">LIÊN HỆ</p>
-                        <ul class="footer-list__item">
-                            <li class="footer-link__item"> Email: cs@Macchiato.vn</li>
-                            <li class="footer-link__item">Representative Store : 91 Đồng Khởi, Bến Nghé, Quận 1, Thành Phố Hồ Chí Minh</li>
-                            <li class="footer-link__item">Working Office: 96-98-100 Trần Nguyên Đán, Phường 3, Quận Bình Thạnh, Thành Phố Hồ Chí Minh</li>
-                            <li class="footer-link__item"> Customer Service: (028) 7300 1009</li>
-                        </ul>
-                    </li>
-                    <li class="footer-link"><p class="footer-link-content">HỖ TRỢ VÀ CHÍNH SÁCH</p>
-                        <ul class="footer-list__item">
-                            <li class="footer-link__item"><a href="">- Quy chế hoạt động và Chính sách bảo mật.</a></li>
-                            <li class="footer-link__item"><a href="">- Chính sách vận chuyển.</a></li>
-                            <li class="footer-link__item"><a href="">- Chính sách thanh toán.</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <p class="desc">Giấy chứng nhận Đăng kí kinh doanh số 0316612746 do Sở Kế hoạch và Đầu tư. Thành phố Hồ Chí Minh cấp ngày 27/11/2020.</p>
-            </div>
-            <div class="get-info">
-                <p class="get-info__desc get">NHẬN THÔNG TIN TỪ MACCHIATO</p>
-                <div class="get-info__icon">
-                    <a href="#!" class="icon-link"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#!" class="icon-link"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#!" class="icon-link"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#!" class="icon-link"><i class="fa-brands fa-tiktok"></i></a>
+              </div>
+         </div>
+           <!-- tablet/mobile header -->
+   
+           <div class="mobile-header">
+              <!-- tablet/mobile menu -->
+              <input
+                 hidden
+                type="checkbox"
+                name="menu-checkbox"
+                id="menu-checkbox"
+                class="menu-checkbox"
+              />
+              <label for="menu-checkbox">
+                <svg
+                  class="menu-header__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    fill="currentcolor"
+                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                  />
+                </svg>
+              </label>
+              <!-- overlay -->
+              <label for="menu-checkbox" class="menu-overlay"></label>
+              <!-- menu-content -->
+              <div class="menu-drawer">
+                <!-- menuTop -->
+                <div class="menu-drawer__top">
+                  
+                  <!-- icon close menu -->
+                 <label for="menu-checkbox">
+          
+                    <svg class="close__menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentcolor"
+                        d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+                      />
+                    </svg>
+                 </label>
                 </div>
-                <p class="get-info__desc give-email">Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin tức mới nhất của Macchiato</p>
-                <form action="">
-                    <input type="email" name="email" id="email" placeholder="Nhập email của bạn...">
-                    <input type="submit" value="Gửi" class="submit">
-                </form>
-
+                <!-- nav mobile -->
+                <ul id="navbar__list--mobile"></ul>
+                <!-- sử dụng js để copy navbar -->
+                <script>
+                  const navPc = document.querySelector("#menu-list");
+                  const navMobile = document.querySelector("#navbar__list--mobile");
+                  //sao chép
+                  navMobile.innerHTML = navPc.innerHTML;
+                </script>
+                <!-- ngăn cách -->
+                 <div class="separate"></div>
+                 <!-- cta-action -->
+                 <div class="show-login__mobile">
+                  <a href="./login.html" class="sign-in log">Sign In</a>
+                  <a href="./signup.html" class="sign-up log">Sign Up</a>
+                </div>
+              </div>
             </div>
         </div>
-        <!-- footer bottom -->
-         <div class="footer-b">
-            <hr>
-            <p class="footer-desc">&copy Macchiato 2025| All rights reserved. Website by Macchiato.</p>
-         </div>
+
+<!-- =====================main================= -->
+
+ <main >
+  <div class="banner">
+    <img src="./assets/img/about_banner.jpg" alt="Banner" class="about__banner">
+  </div>
+  <div class="main-content">
+    <h1 class="heading">Hành trình chinh phục phong vị mới</h1>
+    <div class="about-us-elements">
+      <div class="text">
+       
+        <h2 class="heading__text">"Nốt hương đặc sản"</h2>
+        <p class="text__desc">
+          Macchiato luôn trân quý, nâng niu những giá trị Nguyên Bản ở mỗi
+          vùng đất mà chúng tôi đi qua, nơi tâm hồn được đồng điệu với thiên
+          nhiên, với nỗi vất vả, nhọc nhằn của người nông dân; cảm nhận được
+          hết thảy những tầng hương ẩn sâu trong từng nguyên liệu.
+        </p>
+        <p class="text__desc">
+          Một chặng đường dài đang chờ phía trước, Macchiato đã sẵn sàng
+          viết tiếp câu chuyện Nốt Hương Đặc Sản - Nguyên Bản - Thủ Công đầy
+          cảm hứng và càng tự hào hơn khi được mang sứ mệnh: “Đánh thức
+          những nốt hương đặc sản của nông sản Việt Nam”.
+        </p>
+      </div>
+      <div class="video">
+        <video
+          autoplay
+          loop
+          muted
+          class="about-video"
+        >
+          <source src="./assets/video/video2.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
-</footer>
-</body>
+ 
+ 
+  <div class="tong">
+    <div class="vc-colum-inner">
+      <h2 class="heading__text heading-tong">Giá trị cốt lõi</h2>
+      <!-- item1 -->
+      <div class="post-about">
+        <div class="box-img">
+          <img src="./assets/img/make_coffe.jpg" alt="ảnh" class="img-about" />
+        </div>
+        <div class="about__content">
+         
+          <h3 class="about__content-desc">Thủ công</h3>
+          <p class="text__desc text-thu__cong">
+            Tại Macchiato, sự tâm huyết, tỉ mỉ và tinh tế được thể hiện qua
+            từng sản phẩm. Những lá trà Ô long được thu hoạch và sơ chế thủ
+            công, kết hợp cùng việc nghiên cứu và sáng tạo, Macchiato đã làm
+            nên những sản phẩm mang hương vị nguyên bản và chân nhất.
+          </p>
+
+          <a href="./menu.html" class="access-menu">
+            <button class="btn">Menu</button>
+          </a>
+        </div>
+      
+      </div>
+<!-- item2 -->
+      <div class="post-about">
+        <div class="about__content ab-c">
+          <h3 class="about__content-desc ab-quan__tam">Quan tâm</h3>
+          <p class="text__desc">
+            Tối ưu trải nghiệm của từng khách hàng là tiêu chí hàng đầu của
+            Macchiato. Đó cũng là lý do mọi dịch vụ, sản phẩm của Macchiato
+            luôn xoay quanh yếu tố con người. Macchiato tin rằng, khách hàng
+            - hay rộng hơn là cộng đồng sẽ luôn sát cánh cùng thương hiệu và
+            lan tỏa những giá trị tốt đẹp đến xã hội.
+          </p>
+          <a href="./menu.html" class="access-menu">
+            <button class="btn">Menu</button>
+          </a>
+        </div>
+        <div class="box-img">
+          <a href="#"><img src="./assets/img/care.jpg" alt="Quan tâm" class="img-about" /></a>
+        </div>
+      </div>
+
+      <!-- item 3 -->
+      <div class="post-about">
+        <div class="box-img">
+           <img src="./assets/img/cam_hung.jpg" alt="Cảm hứng"  class="img-about"/>
+        </div>
+        <div class="about__content">
+
+          <h3 class="about__content-desc about-cam__hung">Cảm hứng</h3>
+          <p class="text__desc text-cam__hung">
+            Mỗi sản phẩm, chiến dịch của Macchiato đều được xây dựng dựa theo
+            những nguồn cảm hứng rất đỗi bình dị trong cuộc sống. Với
+            Macchiato, đó là nơi bắt nguồn của những điều mới mẻ và kết nối
+            những tâm hồn đồng điệu nhưng vẫn mang cá tính riêng biệt.
+          </p>
+          <a href="./menu.html" class="access-menu">
+            <button class="btn">Menu</button>
+          </a>
+        </div>
+      </div>
+      <!-- item 4 -->
+      <div class="post-about">
+       
+        <div class="content">
+          <h3 class="about__content-desc">Trách nhiệm</h3>
+          <p class="text__desc ab-c">
+            Macchiato mong muốn tạo ra dấu ấn mạnh mẽ cho Ô Long đặc sản khi
+            sát cánh cùng người nông dân và đề cao sự phát triển bền vững
+            của nguồn nguyên liệu. Bởi chúng tôi tin rằng đây sẽ là bước đệm
+            vững chắc giúp Phê La giới thiệu rộng rãi đặc sản của người Việt
+            tới cộng đồng và vươn ra thế giới.
+          </p>
+        </div>
+        <div class="box-img">
+          <img src="./assets/img/trach_nhiem.jpg" alt="" class="img__trach-nhiem">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ </main>
+    <!-- =================footer================ -->
+    <footer class="footer">
+      <div class="main-content">
+        <div class="footer-top">
+          <div class="footer-content">
+            <div class="about-logo">
+              <img src="./assets/img/logo.png" alt="logo" class="logo logo-footer" />
+              <p class="about">VỀ CHÚNG TÔI</p>
+              <p class="footer-about">
+                Macchiato - HÀNH TRÌNH CHINH PHỤC PHONG VỊ MỚI Macchiato không
+                ngừng theo đuổi sứ mệnh mang phong vị mới từ những vùng đất trứ
+                danh tại Việt Nam và trên thế giới đến khách hàng.
+              </p>
+            </div>
+          </div>
+          <div class="contact-footer">
+            <ul class="footer-list">
+              <li class="footer-link">
+                <p class="footer-link-content">LIÊN HỆ</p>
+                <ul class="footer-list__item">
+                  <li class="footer-link__item">Email: cs@Macchiato.vn</li>
+                  <li class="footer-link__item">
+                    Representative Store : 91 Đồng Khởi, Bến Nghé, Quận 1, Thành
+                    Phố Hồ Chí Minh
+                  </li>
+                  <li class="footer-link__item">
+                    Working Office: 96-98-100 Trần Nguyên Đán, Phường 3, Quận
+                    Bình Thạnh, Thành Phố Hồ Chí Minh
+                  </li>
+                  <li class="footer-link__item">
+                    Customer Service: (028) 7300 1009
+                  </li>
+                </ul>
+              </li>
+              <li class="footer-link">
+                <p class="footer-link-content">HỖ TRỢ VÀ CHÍNH SÁCH</p>
+                <ul class="footer-list__item">
+                  <li class="footer-link__item">
+                    <a href="">- Quy chế hoạt động và Chính sách bảo mật.</a>
+                  </li>
+                  <li class="footer-link__item">
+                    <a href="">- Chính sách vận chuyển.</a>
+                  </li>
+                  <li class="footer-link__item">
+                    <a href="">- Chính sách thanh toán.</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <p class="desc footer-mobile">
+              Giấy chứng nhận Đăng kí kinh doanh số 0316612746 do Sở Kế hoạch và
+              Đầu tư. Thành phố Hồ Chí Minh cấp ngày 27/11/2020.
+            </p>
+          </div>
+          <div class="get-info">
+            <p class="get-info__desc get">NHẬN THÔNG TIN TỪ MACCHIATO</p>
+            <div class="get-info__icon">
+              <a href="#!" class="icon-link"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#!" class="icon-link"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#!" class="icon-link"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a href="#!" class="icon-link"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+            </div>
+            <p class="get-info__desc give-email">
+              Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin
+              tức mới nhất của Macchiato
+            </p>
+            <form action="">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Nhập email của bạn..."
+              />
+              <input type="submit" value="Gửi" class="submit" />
+            </form>
+             <!-- nhúng bản đồ -->
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4857722123475!2d106.65053797451807!3d10.85060915782209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529bdf3faa0bb%3A0x7545dc061a1bee91!2zMzUxIFBo4bqhbSBWxINuIENoacOqdSwgUGjGsOG7nW5nIDE0LCBHw7IgVuG6pXAsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1743848457718!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+     
+   
+        </div>
+       
+        <!-- footer bottom -->
+        <div class="footer-b">
+          <hr />
+          <p class="footer-desc">
+            &copy Macchiato 2025| All rights reserved. Website by Macchiato.
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- js animation -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

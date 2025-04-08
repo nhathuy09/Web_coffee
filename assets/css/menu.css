@@ -1,0 +1,115 @@
+
+
+main {
+    display: flex;
+}
+
+h2 {
+    padding: 10px;
+}
+
+/* ===================================== PHẦN ASIDE ========================================= */
+.aside {
+    width: 24%;
+    border-right: 2px solid #123458;
+    
+}
+
+.left-menu {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 50px;
+    position: sticky;
+    top: 150px;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.aside li {
+    list-style-type: none;
+    padding: 15px;
+    
+}
+
+.aside a {
+    text-decoration: none;
+    color: #AB886D;
+    font-size: 2rem;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px;
+    font-family: 'serif';
+    
+}
+.aside a :hover{
+    opacity: 0.8;
+}
+
+
+/* ====================================== KẾT THÚC PHẦN ASIDE ============================== */
+
+
+/* section */
+.right-menu{
+    width: 75%;
+    margin-left: 20px;
+}
+.menu-title{
+    margin-top: 50px;
+    font-size: 4.4rem;
+    font-weight: 600;
+    color: #AB886D;
+}
+
+.product-zone {
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.product-img {
+    width: 293px;
+    height: 299px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product {
+    width: 300px;
+    height: 500px;
+    justify-items: center;
+}
+
+.product-name {
+    color: black;
+    margin: 5px; 
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+}
+
+.buy-button {
+    display: inline-block;
+    color:#123458 ;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #fff;
+    opacity: 0.7;
+    border: 2px solid;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.buy-button:hover{
+    background-color: #123458;
+    color: #fff;
+   
+}
+

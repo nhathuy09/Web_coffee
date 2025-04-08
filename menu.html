@@ -8,6 +8,8 @@
      <link rel="stylesheet" href="./assets/css/reset.css">
      <!-- style -->
       <link rel="stylesheet" href="./assets/css/style.css">
+      <!-- menu css -->
+       <link rel="stylesheet" href="./assets/css/menu.css">
       <!-- responsive -->
        <link rel="stylesheet" href="./assets/css/responsive.css">
        <!-- AOS -->
@@ -15,90 +17,380 @@
     <title>Document</title>
 </head>
 <body>
-     <!-- ===================header================= -->
-     <div class="header">
-                
+      <!-- ===================header================= -->
+      <div class="header">
         <!-- menu-bar -->
-         <div class="menu-bar">
-            <img src="./assets/img/logo.png" alt="logo" class="logo">
-            <ul class="menu-bar__list">
-                <li class="menu-bar__link">
+        <div class="menu-bar">
+              <img src="./assets/img/logo.png" alt="logo" class="logo" />
+              <nav class="nav">
+                <ul class="menu-bar__list" id="menu-list">
+                  <li class="menu-bar__link">
                     <a href="./index.html">Home</a>
-                </li>
-                <li class="menu-bar__link">
-                    <a href="./about.html">ABout</a>
-                </li>
-                <li class="menu-bar__link">
-                    <a href="./menu.html">Menu</a>
-                </li>
-                <li class="menu-bar__link">
-                    <a href="./event.html">Event</a>
-                </li>
-               
-            </ul>
-            <div class="log-in">
+                  </li>
+                  <li class="menu-bar__link">
+                    <label for="menu"><a href="./about.html">About</a></label>
+                  </li>
+                  <li class="menu-bar__link">
+                    <label for="menu"> <a href="./menu.html">Menu</a></label>
+                  </li>
+                  <li class="menu-bar__link">
+                    <label for="menu"><a href="./event.html">Event</a></label>
+                  </li>
+                </ul>
+              </nav>
+              <div class="log-in">
                 <a href="./login.html" class="sign-in log">Sign In</a>
                 <a href="./signup.html" class="sign-up log">Sign Up</a>
-            </div>
-    </div>
-</div>
-
-
-   <!-- =================footer================ -->
-   <footer class="footer">
-    <div class="main-content">
-        <div class="footer-top">
-            <div class="footer-content">
-                <div class="about-logo">
-                    <img src="./assets/img/logo.png" alt="logo" class="logo">
-                    <p class="about">VỀ CHÚNG TÔI</p>
-                    <p class="footer-about">Macchiato - HÀNH TRÌNH CHINH PHỤC PHONG VỊ MỚI
-                        Macchiato không ngừng theo đuổi sứ mệnh mang phong vị mới từ những vùng đất trứ danh tại Việt Nam và trên thế giới đến khách hàng.</p>
-                   
-                    </div>
-            </div>
-            <div class="contact-footer">
-                <ul class="footer-list">
-                    <li class="footer-link"><p class="footer-link-content">LIÊN HỆ</p>
-                        <ul class="footer-list__item">
-                            <li class="footer-link__item"> Email: cs@Macchiato.vn</li>
-                            <li class="footer-link__item">Representative Store : 91 Đồng Khởi, Bến Nghé, Quận 1, Thành Phố Hồ Chí Minh</li>
-                            <li class="footer-link__item">Working Office: 96-98-100 Trần Nguyên Đán, Phường 3, Quận Bình Thạnh, Thành Phố Hồ Chí Minh</li>
-                            <li class="footer-link__item"> Customer Service: (028) 7300 1009</li>
-                        </ul>
-                    </li>
-                    <li class="footer-link"><p class="footer-link-content">HỖ TRỢ VÀ CHÍNH SÁCH</p>
-                        <ul class="footer-list__item">
-                            <li class="footer-link__item"><a href="">- Quy chế hoạt động và Chính sách bảo mật.</a></li>
-                            <li class="footer-link__item"><a href="">- Chính sách vận chuyển.</a></li>
-                            <li class="footer-link__item"><a href="">- Chính sách thanh toán.</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <p class="desc">Giấy chứng nhận Đăng kí kinh doanh số 0316612746 do Sở Kế hoạch và Đầu tư. Thành phố Hồ Chí Minh cấp ngày 27/11/2020.</p>
-            </div>
-            <div class="get-info">
-                <p class="get-info__desc get">NHẬN THÔNG TIN TỪ MACCHIATO</p>
-                <div class="get-info__icon">
-                    <a href="#!" class="icon-link"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#!" class="icon-link"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#!" class="icon-link"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#!" class="icon-link"><i class="fa-brands fa-tiktok"></i></a>
+              </div>
+         </div>
+           <!-- tablet/mobile header -->
+   
+           <div class="mobile-header">
+              <!-- tablet/mobile menu -->
+              <input
+                 hidden
+                type="checkbox"
+                name="menu-checkbox"
+                id="menu-checkbox"
+                class="menu-checkbox"
+              />
+              <label for="menu-checkbox">
+                <svg
+                  class="menu-header__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    fill="currentcolor"
+                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                  />
+                </svg>
+              </label>
+              <!-- overlay -->
+              <label for="menu-checkbox" class="menu-overlay"></label>
+              <!-- menu-content -->
+              <div class="menu-drawer">
+                <!-- menuTop -->
+                <div class="menu-drawer__top">
+                  
+                  <!-- icon close menu -->
+                 <label for="menu-checkbox">
+          
+                    <svg class="close__menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentcolor"
+                        d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+                      />
+                    </svg>
+                 </label>
                 </div>
-                <p class="get-info__desc give-email">Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin tức mới nhất của Macchiato</p>
-                <form action="">
-                    <input type="email" name="email" id="email" placeholder="Nhập email của bạn...">
-                    <input type="submit" value="Gửi" class="submit">
-                </form>
-
+                <!-- nav mobile -->
+                <ul id="navbar__list--mobile"></ul>
+                <!-- sử dụng js để copy navbar -->
+                <script>
+                  const navPc = document.querySelector("#menu-list");
+                  const navMobile = document.querySelector("#navbar__list--mobile");
+                  //sao chép
+                  navMobile.innerHTML = navPc.innerHTML;
+                </script>
+                <!-- ngăn cách -->
+                 <div class="separate"></div>
+                 <!-- cta-action -->
+                 <div class="show-login__mobile">
+                  <a href="./login.html" class="sign-in log">Sign In</a>
+                  <a href="./signup.html" class="sign-up log">Sign Up</a>
+                </div>
+              </div>
             </div>
         </div>
-        <!-- footer bottom -->
-         <div class="footer-b">
-            <hr>
-            <p class="footer-desc">&copy Macchiato 2025| All rights reserved. Website by Macchiato.</p>
-         </div>
-    </div>
-</footer>
-</body>
-</html>
+
+        <!-- =======================main======================== -->
+        <main>
+          <!-- Menu sản phẩm bên trái -->
+          <div class="aside">
+            <ul class="left-menu">
+              <li><a href="#caphe"><button class="btn btn-menu">CÀ PHÊ</button></a></li>
+              <li><a href="#tra-sua"><button class="btn btn-menu">TRÀ SỮA</button></a></li>
+              <li><a href="#olong-matcha"><button class="btn btn-menu">Ô LONG MATCHA</button></a></li>
+              <li><a href="#cake"><button class="btn btn-menu">CAKE</button></a></li>
+              <li><a href="#topping"><button class="btn btn-menu">TOPPING</button></a></li>
+            </ul>
+          </div>
+  
+          <!-- Thông tin sản phẩm bên phải -->
+          <div class="right-menu">
+            <div class="caphe" id="caphe">
+              <h2 class="menu-title">CÀ PHÊ</h2>
+              <div class=" product-zone">
+                <!-- item1 -->
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/Ca-Phe-Đen.jpg" alt="cà phê đen"/></a>
+                  
+                  <p class="product-name">CÀ PHÊ ĐEN</p>
+                  <p class="price">30.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+                <!-- item2 -->
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/Ca-Phe-Sua-Da.jpg" alt="cà phê sữa đá"/></a>
+            
+                  <p class="product-name">CÀ PHÊ SỮA ĐÁ</p>
+                  <p class="price">35.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+                <!-- item3 -->
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/Epresso.jpg" alt="espresso"/></a>
+                  
+                  <p class="product-name">ESPRESSO</p>
+                  <p class="price">45.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+                <!-- item4 -->
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/capuchino_coffe.jpg" alt="capuchino"/></a>
+                  
+                  <p class="product-name">CAPUCHINO</p>
+                  <p class="price">50.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+              <!-- item5 -->
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/Ca-Phe-Truffle.jpg" alt="cà phê truffle"/></a>
+                 
+                  <p class="product-name">CÀ PHÊ TRUFFLE</p>
+                  <p class="price">50.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+                <!-- item6 -->
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/Ca-Phe-Vanilla-Latte.jpg" alt="vanilla latte"/></a>
+                  
+                  <p class="product-name">VANILLA LATTE</p>
+                  <p class="price">50.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+              </div>
+            </div>
+            <!-- ================================= KẾT THÚC PHẦN CÀ PHÊ ============================================ -->
+            <div class="tra-sua" id="tra-sua">
+              <h2 class="menu-title">TRÀ SỮA</h2>
+              <div class=" product-zone">
+                <!-- item1 -->
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/milk_tea_traditional.jpg" alt="trà sữa truyền thống"/></a>
+                 
+                  <p class="product-name">TRÀ SỮA TRUYỀN THỐNG</p>
+                  <p class="price">35.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+                <!-- item2 -->
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/tra_sua-gao.jpg" alt="trà sữa gạo rang"/></a>
+                 
+                  <p class="product-name">TRÀ SỮA GẠO RANG</p>
+                  <p class="price">40.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+                <!-- item3 -->
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/Tra-Sua-Oolong-Kem-Trung-Nuong.jpg" alt="trà sữa ô long kem trứng"/></a>
+                 
+                  <p class="product-name">TRÀ SỮA Ô LONG</p>
+                  <p class="price">40.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+              </div>
+            </div>
+            <!-- ================================= KẾT THÚC PHẦN TRÀ SỮA =========================================== -->
+            <div class="olong-matcha" id="olong-matcha">
+              <h2 class="menu-title">Ô LONG MATCHA</h2>
+              <!-- item1 -->
+              <div class=" product-zone">
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/matcha.jpg" alt="ô long matcha"/></a>
+                 
+                  <p class="product-name">Ô LONG MATCHA</p>
+                  <p class="price">50.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+              </div>
+            </div>
+            <!-- ================================= KẾT THÚC PHẦN Ô LONG MATCHA ===================================== -->
+            <div class="cake" id="cake">
+              <h2 class="menu-title">Cake</h2>
+              <div class="product-zone">
+                <!-- item1 -->
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/macaron.jpg" alt="macaron"/></a>
+                  
+                  <p class="product-name">Macaron</p>
+                  <p class="price">50.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+                <!-- item2 -->
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/scone.jpg" alt="scone"/></a>
+                  
+                  <p class="product-name">Scone</p>
+                  <p class="price">50.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+                <!-- item3 -->
+                <div class="product product-menu">
+                  <a href="#"><img class="product-img" src="./assets/img/chessecake.jpg" alt="CHEESECAKE"/></a>
+                  
+                  <p class="product-name">CHEESECAKE</p>
+                  <p class="price">50.000đ</p>
+                  <a href="#" class="buy-button">MUA NGAY</a>
+                </div>
+              </div>
+            </div>
+            <!-- ================================= KẾT THÚC PHẦNCake =================================== -->
+            <div class="topping" id="topping">
+            <h2 class="menu-title">TOPPING</h2>
+            <div class="product-zone">
+              <!-- item1 -->
+              <div class="product product-menu">
+                <a href="#"><img class="product-img" src="./assets/img/Thach-Tra-Vo.jpg" alt="thạch trà vỏ"/></a>
+               
+                <p class="product-name">THẠCH TRÀ VỎ</p>
+                <p class="price">15.000đ</p>
+                <a href="#" class="buy-button">MUA NGAY</a>
+              </div>
+              <!-- item2 -->
+              <div class="product product-menu">
+                <a href="#"><img class="product-img" src="./assets/img/Tran-Chau-Phong-Lan.jpg" alt="trân châu phong lan"/></a>
+                
+                <p class="product-name">TRÂN CHÂU PHONG LAN</p>
+                <p class="price">10.000đ</p>
+                <a href="#" class="buy-button">MUA NGAY</a>
+              </div>
+              <!-- item3 -->
+              <div class="product product-menu">
+                <a href="#"><img class="product-img" src="./assets/img/Tran-Chau-O-Long.jpg" alt="trân châu ô long"/></a>
+               
+                <p class="product-name">TRÂN CHÂU Ô LONG</p>
+                <p class="price">10.000đ</p>
+                <a href="#" class="buy-button">MUA NGAY</a>
+              </div>
+              <!-- item4 -->
+              <div class="product product-menu">
+                <a href="#"><img class="product-img" src="./assets/img/Tran-Chau-Gao-Rang.jpg" alt="trân châu gạo rang"/></a>
+                
+                <p class="product-name">TRÂN CHÂU GẠO RANG</p>
+                <p class="price">10.000đ</p>
+                <a href="#" class="buy-button">MUA NGAY</a>
+              </div>
+            </div>
+            </div>
+          </div>
+        </main>
+
+      <!-- =================footer================ -->
+      <footer class="footer">
+        <div class="main-content">
+          <div class="footer-top">
+            <div class="footer-content">
+              <div class="about-logo">
+                <img src="./assets/img/logo.png" alt="logo" class="logo logo-footer" />
+                <p class="about">VỀ CHÚNG TÔI</p>
+                <p class="footer-about">
+                  Macchiato - HÀNH TRÌNH CHINH PHỤC PHONG VỊ MỚI Macchiato không
+                  ngừng theo đuổi sứ mệnh mang phong vị mới từ những vùng đất trứ
+                  danh tại Việt Nam và trên thế giới đến khách hàng.
+                </p>
+              </div>
+            </div>
+            <div class="contact-footer">
+              <ul class="footer-list">
+                <li class="footer-link">
+                  <p class="footer-link-content">LIÊN HỆ</p>
+                  <ul class="footer-list__item">
+                    <li class="footer-link__item">Email: cs@Macchiato.vn</li>
+                    <li class="footer-link__item">
+                      Representative Store : 91 Đồng Khởi, Bến Nghé, Quận 1, Thành
+                      Phố Hồ Chí Minh
+                    </li>
+                    <li class="footer-link__item">
+                      Working Office: 96-98-100 Trần Nguyên Đán, Phường 3, Quận
+                      Bình Thạnh, Thành Phố Hồ Chí Minh
+                    </li>
+                    <li class="footer-link__item">
+                      Customer Service: (028) 7300 1009
+                    </li>
+                  </ul>
+                </li>
+                <li class="footer-link">
+                  <p class="footer-link-content">HỖ TRỢ VÀ CHÍNH SÁCH</p>
+                  <ul class="footer-list__item">
+                    <li class="footer-link__item">
+                      <a href="">- Quy chế hoạt động và Chính sách bảo mật.</a>
+                    </li>
+                    <li class="footer-link__item">
+                      <a href="">- Chính sách vận chuyển.</a>
+                    </li>
+                    <li class="footer-link__item">
+                      <a href="">- Chính sách thanh toán.</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <p class="desc footer-mobile">
+                Giấy chứng nhận Đăng kí kinh doanh số 0316612746 do Sở Kế hoạch và
+                Đầu tư. Thành phố Hồ Chí Minh cấp ngày 27/11/2020.
+              </p>
+            </div>
+            <div class="get-info">
+              <p class="get-info__desc get">NHẬN THÔNG TIN TỪ MACCHIATO</p>
+              <div class="get-info__icon">
+                <a href="#!" class="icon-link"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+                <a href="#!" class="icon-link"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a href="#!" class="icon-link"
+                  ><i class="fa-brands fa-youtube"></i
+                ></a>
+                <a href="#!" class="icon-link"
+                  ><i class="fa-brands fa-tiktok"></i
+                ></a>
+              </div>
+              <p class="get-info__desc give-email">
+                Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin
+                tức mới nhất của Macchiato
+              </p>
+              <form action="">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Nhập email của bạn..."
+                />
+                <input type="submit" value="Gửi" class="submit" />
+              </form>
+               <!-- nhúng bản đồ -->
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4857722123475!2d106.65053797451807!3d10.85060915782209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529bdf3faa0bb%3A0x7545dc061a1bee91!2zMzUxIFBo4bqhbSBWxINuIENoacOqdSwgUGjGsOG7nW5nIDE0LCBHw7IgVuG6pXAsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1743848457718!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+       
+     
+          </div>
+         
+          <!-- footer bottom -->
+          <div class="footer-b">
+            <hr />
+            <p class="footer-desc">
+              &copy Macchiato 2025| All rights reserved. Website by Macchiato.
+            </p>
+          </div>
+  
+        </div>
+      </footer>
+  
+      <!-- js animation -->
+      <script>
+        AOS.init();
+      </script>
+    </body>
+  </html>
+  

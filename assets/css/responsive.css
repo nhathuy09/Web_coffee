@@ -1,246 +1,460 @@
 /* PC */
-@media (min-width:992px){
-
-.mobile-header{
+@media (min-width: 992px) {
+  .mobile-header {
     display: none;
-}
-.version-mobile{
+  }
+  .version-mobile {
     display: none;
-}
-/* ============signup============== */
+  }
+  /* ============signup============== */
 }
 /* tablet-mobile */
-@media (max-width:991.98px){
-    /* 1. Ẩn thanh menu-bar */
-       .nav{
-        display:none ;
-       }
-    /* 2. Chuyển thanh logo vào giữ */
-    .logo{
-        width: 200px;
-       margin-left: 27%;
-    }
- 
-    /* 3. Code phần bars */
-    .mobile-header{
-       
-
-    }
-    .menu-header__icon{
-        width: 32px;
-        cursor: pointer;
-        color: #AB886D;
-        position: absolute;
-        left: 39px;
-        top: 55px;
-        z-index: 1;
-
-    }
-
-    .close__menu{
-        width: 24px;
-        position: absolute;
-        left: 315px;
-        top: 50px;
-        cursor: pointer;
-        color: #fff;
-    }
-    /* 4. code phần overlay */
-    .menu-overlay{
-        position: fixed;
-        background: rgba(0, 0, 0, 0.3);
-         inset: 0;
-         z-index: 1;
-         opacity: 0;
-         visibility: hidden;
-         transition: 0.3s;
-    }
-    /* check kiểm tra phần overlay */
-    .menu-checkbox:checked~ .menu-overlay{
-        opacity: 1;
-        visibility: visible;
-    }
-    .menu-drawer{
-        position: fixed;
-        background-color:#123458;
-        inset: 0 50% 0 0;
-        z-index: 2;
-        transform: translateX(-100%);
-        transition: transform 0.8s;
-        padding: 40px;
-    }
-    /* 6.check phầm menu-drawer */
-        .menu-checkbox:checked~.menu-drawer{
-         transform: translateX(0);
-    }
-       /* 7. code phần nav  */
-     #navbar__list--mobile{
-        display: inline-block;
-        margin: 0 auto;
-     }
-         .menu-bar__link a{
-            margin-top: 20px;
-            display: flex;
-             font-size: 2.3rem;
-             padding: 20px;
-      }
-      /* 8. =====code phần main======= */
-      /* about */
-      .about-us{
-        flex-direction: column;
-      }
-      /* product */
-      .product-item{
-        flex-direction: column;
-      }
-      .item__pr-img{
-        width: 100%;
-      }
-
-       /* 9.code phần footer */
-       .footer-top{
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .about-logo .logo{
-        margin: 30px auto 0;
-      }
-      .footer-mobile{
-       margin: 0 auto;
-      }
-      .get-info{
-        margin: 30px auto 10px;
-      }
-      .get-info__icon{
-       margin-left: 70px;
-      }
-
-      /* ===============phần login============= */
-    .head{
-        margin-left: -230px;
-    }
-      .container{
-        display: none;
-      }
-    .version-mobile{
-       position: relative;
-    }
-    .version-mobile__img{
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        
-    }
-      .form-mobile{
-        width: 403px;
-        height: 540px;
-        background-color: #fff;
-        box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.5);
-        text-align: center;
-        border-radius: 5px;
-        margin: 0 auto; 
-        position: absolute;
-        top: 70px;
-        left: 110px;
-      }
-      .content-mobile{
-        margin-top: 30px; 
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 30px;
-      }
-     
-/* ================phần sign Up================ */
-
-    }
-/* tablet */
-@media(min-width:768px) and (max-width:991.98px){
-
-}
-/* mobile */
-@media(max-width:767.98px){
-    /* code phần head */
-    .close__menu{
-        left: 150px;
-    }
-    .log-in{
-        display: none;
-    }
-    .show-login__mobile{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-    }
-    .sign-in{
-        margin-top: 30px;
-        margin-left: 30px;
-    }
-    .sign-up{
-       text-align: center;
-       width: 110px;
-    }
-    .separate{
-        border-top: 2px solid #AB886D;
-        margin-top: 10px;
-       }
-       /* code phần main */
-     .about-us__content{
-        width: 100%;
-       
-     }
-     .about-us-desc{
-        width: 300px;
-     }
-    video{
-        width: 100%;
-        margin: -70px auto -100px;
-    }
-    .item__pr-img{
-        width: 100%;
-        height: 388px;
-    }
-    .event-heading{
-        font-size: 4.3rem;
-    }
-/* footer */
-
-.footer-top{
-    text-align: start;
-    
-   
-}
-.footer-about{
-    
-    width:320px
-}
-.contact-footer{
-    width: 340px;
-}
-/* phần login */
-/* sign in */
-.head .logo{
-    margin-left: 250px;
-}
-.form-mobile{
- width: 358px;
- height: 538px;
-left: 8px ;
- 
-}
-.content-mobile{
-    margin-top: 10px;
-}
-.title{
+@media (max-width: 991.98px) {
+  /* 1. Ẩn thanh menu-bar */
+  .nav {
     display: none;
+  }
+  /* 2. Chuyển thanh logo vào giữ */
+  .logo {
+    width: 200px;
+    margin-left: 27%;
+  }
+
+  /* 3. Code phần bars */
+  .mobile-header {
+  }
+  .menu-header__icon {
+    width: 32px;
+    cursor: pointer;
+    color: #ab886d;
+    position: absolute;
+    left: 39px;
+    top: 55px;
+    z-index: 1;
+  }
+
+  .close__menu {
+    width: 24px;
+    position: absolute;
+    left: 315px;
+    top: 50px;
+    cursor: pointer;
+    color: #fff;
+  }
+  /* 4. code phần overlay */
+  .menu-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+  /* check kiểm tra phần overlay */
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu-drawer {
+    position: fixed;
+    background-color: #123458;
+    inset: 0 50% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: transform 0.8s;
+    padding: 40px;
+  }
+  /* 6.check phầm menu-drawer */
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  /* 7. code phần nav  */
+  #navbar__list--mobile {
+    display: inline-block;
+    margin: 0 auto;
+  }
+  .menu-bar__link a {
+    margin-top: 20px;
+    display: flex;
+    font-size: 2.3rem;
+    padding: 20px;
+  }
+  /* 8. =====code phần main======= */
+  /* about */
+  .about-us {
+    flex-direction: column;
+  }
+  /* product */
+  .product-item {
+    flex-direction: column;
+  }
+  .item__pr-img {
+    width: 100%;
+  }
+  /* event */
+  .box-event {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .box__event-item {
+    width: 100%;
+  }
+  .box__event-img {
+    margin-top: 40px;
+    margin-left: 29%;
+  }
+  .box__event-desc,
+  .box__desc-date,
+  .box__desc {
+    margin-left: 13%;
+  }
+  .btn-event {
+    margin-left: 13%;
+  }
+
+  /* 9.code phần footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+  .about-logo .logo {
+    margin: 30px auto 0;
+  }
+  .footer-mobile {
+    margin: 0 auto;
+  }
+  .get-info {
+    margin: 30px auto 10px;
+  }
+  .get-info__icon {
+    margin-left: 70px;
+  }
+
+  /* ===============phần login============= */
+  .separate {
+    border-top: 2px solid #ab886d;
+    margin-top: 10px;
+  }
+  .show-login__mobile {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .head {
+    margin-top: 30px;
+  }
+  .container {
+    display: none;
+  }
+  .version-mobile {
+    position: relative;
+  }
+  .version-mobile__img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .form-mobile {
+    width: 403px;
+    height: 540px;
+    background-color: #fff;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 auto;
+    position: absolute;
+    top: 70px;
+    left: 110px;
+  }
+  .content-mobile {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+  }
+
+  /* ================phần Menu chung================ */
+  /* thanh menu của menu */
+  .aside {
+    width: 0%;
+    border-right: none;
+  }
+  .left-menu {
+    flex-direction: row;
+    margin-top: 0;
+    position: relative;
+    top: 15px;
+    margin-left: 100px;
+  }
+  .aside li {
+    padding: 0;
+  }
+
+  .aside a:hover {
+    opacity: 0.9;
+  }
+  .btn-menu {
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: none;
+    width: 100px;
+  }
+  .btn-menu:hover {
+    background-color: #fff;
+    color: #ab886d;
+  }
+  /* phần sản phẩm */
+
+  section {
+    width: 100%;
+  }
+  .menu-title:first-child {
+    margin-top: 100px;
+  }
+  .menu-title {
+    margin-bottom: -20px;
+  }
+  .product-zone {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0px;
+  }
+  .product-menu {
+    width: 348px;
+    height: 478px;
+  }
+
+  .product-img {
+    width: 234px;
+    height: 289px;
+  }
+  /*======================= about================== */
+  .about-us-elements {
+    flex-direction: column;
+  }
+  .text {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  .video {
+    width: 100%;
+  }
+  .about__content {
+    width: 100%;
+  }
+  .ab-quan__tam {
+    margin-top: -40px;
+    margin-left: 30px;
+  }
+  .ab-c {
+    margin-left: 55px;
+  }
+  .post-about {
+    flex-direction: column;
+  }
+  .about__content-desc {
+    margin-top: 30px;
+  }
+  .about__content .btn {
+    margin-bottom: 30px;
+  }
+  .box-img:last-child {
+    margin-top: 30px;
+  }
+  .text-thu__cong,
+  .text-cam__hung {
+    width: 90%;
+    margin-left: 10px;
+  }
+
+  /* =======event======== */
+  .main-event {
+    flex-direction: column;
+  }
+  .event-box {
+    grid-template-columns: 1fr;
+  }
+  .event-item {
+    width: 100%;
+    text-align: center;
+    margin-left: 15%;
+  }
+  .event-img {
+    width: 100%;
+    height: 478px;
+  }
+  .latest-posts {
+    width: 90%;
+  }
 }
-/* phần map  */
-iframe{
+/*================= tablet ================*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/*================ mobile==================== */
+@media (max-width: 767.98px) {
+  /* code phần head */
+  .close__menu {
+    left: 150px;
+  }
+  .log-in {
+    display: none;
+  }
+  .show-login__mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  .sign-in {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .sign-up {
+    text-align: center;
+    width: 110px;
+  }
+  .separate {
+    border-top: 2px solid #ab886d;
+    margin-top: 10px;
+  }
+  /* code phần main */
+  .about-us__content {
+    width: 100%;
+  }
+  .about-us-desc {
+    width: 300px;
+  }
+  video {
+    width: 100%;
+    margin: -70px auto -100px;
+  }
+  .item__pr-img {
+    width: 100%;
+    height: 388px;
+  }
+  /*============ menu=========== */
+
+  .left-menu {
+    margin-left: 0px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   
+
+  }
+
+  .product-zone {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-title {
+    font-size: 3.5rem;
+  }
+  .menu-title:first-child{
+    margin-top: 150px;
+  }
+  .product-menu {
+    width: 178px;
+    height: 306px;
+    margin-top: 50px;
+  }
+
+  .product-img {
+    width: 146px;
+    height: 142px;
+  }
+  .product-name {
+    font-size: 1.4rem;
+  }
+  /* =====about===== */
+  .heading {
+    font-size: 4rem;
+    margin-top: 30px;
+  }
+  .heading__text {
+    margin-top: -30px;
+    font-size: 2.4em;
+  }
+  .img-about {
+    width: 246px;
+    height: 265px;
+  }
+  .about__content {
+    width: 100%;
+  }
+  .img__trach-nhiem {
+    width: 100%;
+    height: 265px;
+  }
+  .ab-quan__tam {
+    margin-top: -10px;
+    margin-left: 20px;
+  }
+  /* event */
+  .heading-event {
+    font-size: 3.6rem;
+  }
+  .event-img {
+    height: 304px;
+  }
+  .lp-desc {
+    font-size: 1.4rem;
+  }
+
+  .event-heading {
+    font-size: 4.3rem;
+  }
+  .box__event-img {
+    width: 299px;
+    height: 372px;
+  }
+  .box__event-desc,
+  .box__desc-date,
+  .box__desc {
+    font-size: 1.4rem;
+    margin-left: 139px;
+  }
+  .link-to__event {
+    margin-left: 144px;
+  }
+  .btn-event {
+    margin-left: 139px;
+  }
+
+  /* footer */
+
+  .footer-top {
+    text-align: start;
+  }
+  .footer-about {
+    width: 320px;
+  }
+  .contact-footer {
+    width: 340px;
+  }
+  /* phần login */
+  /* sign in */
+  .head .logo {
+    margin-left: 250px;
+  }
+  .form-mobile {
+    width: 358px;
+    height: 538px;
+    left: 8px;
+  }
+  .content-mobile {
+    margin-top: 10px;
+  }
+  .title {
+    display: none;
+  }
+  /* phần map  */
+  iframe {
     width: 200px;
     height: 200px;
     margin-left: 20px;
+  }
 }
-
-}
-

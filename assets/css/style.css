@@ -140,7 +140,6 @@ video{
     width:655px;
     height: 489px;
     margin-left: 33px;
-    
 }
 /* product */
 .product{
@@ -178,7 +177,42 @@ justify-content: center;
     font-weight: 500;
     color: #AB886D;
 }
+
+.box-event{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+    margin-left: -150px;
+}
+.box__event-img{
+    width: 469px;
+    height: 593px;
+    border-radius: 8px;
+
+}
+.link-to__event{
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #328E6E;
+    color: #fff;
+    padding: 5px;
+    font-size: 1.6rem;
+
+}
+.box__event-desc,.box__desc-date,.box__desc{
+    margin-top: 10px;
+    font-size: 1.6rem;
+    font-family: 'Poppins';
+    line-height: 1.67;
+    color: #123458;
+}
+.btn-event{
+    margin-top: 10px;
+}
+
 /* ==============footer==================== */
+
 .footer{
     margin-top: 100px;
     background-color: #123458;
@@ -197,14 +231,18 @@ justify-content: center;
 }
 .footer-about{
     line-height: 1.78;
+    
 }
-.about-logo .logo{
+.logo-footer{
+    display: inline-block;
+    font-size: 5rem;
     margin-top: 85px;
-    margin-left: 155px;
+    margin-left: 105px;
 }
 .about{
     font-weight: 500;
-    margin-top: 75px;
+    margin-top: 65px;
+    font-family: serif;
 }
 .fa-brands{
     color: #fff;
