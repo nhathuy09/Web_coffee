@@ -178,6 +178,9 @@
   }
 
   /* ================phần Menu chung================ */
+  .logo-mobile{
+    margin-left: 71px;
+  }
   /* thanh menu của menu */
   .aside {
     width: 0%;
