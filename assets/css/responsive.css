@@ -59,7 +59,7 @@
   .menu-drawer {
     position: fixed;
     background-color: #123458;
-    inset: 0 50% 0 0;
+    inset: 0  50% 0 0;
     z-index: 2;
     transform: translateX(-100%);
     transition: transform 0.8s;
@@ -91,6 +91,7 @@
   }
   .item__pr-img {
     width: 100%;
+    object-fit: cover;
   }
   /* event */
   .box-event {
@@ -102,7 +103,7 @@
   }
   .box__event-img {
     margin-top: 40px;
-    margin-left: 29%;
+    margin-left: 20%;
   }
   .box__event-desc,
   .box__desc-date,
@@ -293,6 +294,7 @@
   .latest-posts {
     width: 90%;
   }
+
 }
 /*================= tablet ================*/
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -334,7 +336,7 @@
   }
   video {
     width: 100%;
-    margin: -70px auto -100px;
+    margin: 0px auto -100px;
   }
   .item__pr-img {
     width: 100%;
@@ -356,9 +358,15 @@
   .menu-title {
     font-size: 3.5rem;
   }
+ 
   .menu-title:first-child{
     margin-top: 150px;
+    padding-left: 97px;
   }
+  .tra-sua .menu-title,  .olong-matcha .menu-title, .cake .menu-title{
+    margin-top: 80px;
+  }
+
   .product-menu {
     width: 178px;
     height: 306px;
@@ -370,7 +378,7 @@
     height: 142px;
   }
   .product-name {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
   /* =====about===== */
   .heading {
