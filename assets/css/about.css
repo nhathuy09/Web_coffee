@@ -64,6 +64,8 @@ color: #AB886D;
   border-radius: 18px;
   width: 486px;
   height: 486px;
+  object-fit: cover;
+ 
 }
 
 .about__content{
@@ -92,6 +94,7 @@ color: #AB886D;
   width: 500px;
   height: 438px;
   border-radius: 18px;
+  object-fit: cover;
 }
 
 .img {

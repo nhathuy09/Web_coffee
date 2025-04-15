@@ -103,7 +103,7 @@
   }
   .box__event-img {
     margin-top: 40px;
-    margin-left: 20%;
+    margin-left: 126px;
   }
   .box__event-desc,
   .box__desc-date,
@@ -145,7 +145,7 @@
     gap: 20px;
   }
   .head {
-    margin-top: 30px;
+    margin-top: 0px;
   }
   .container {
     display: none;
@@ -298,6 +298,9 @@
 }
 /*================= tablet ================*/
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .link-to__event{
+    display: none;
+  }
 }
 
 /*================ mobile==================== */
@@ -317,7 +320,7 @@
   }
   .sign-in {
     margin-top: 30px;
-    margin-left: 30px;
+    margin-left: 0px;
   }
   .sign-up {
     text-align: center;
@@ -363,7 +366,7 @@
     margin-top: 150px;
     padding-left: 97px;
   }
-  .tra-sua .menu-title,  .olong-matcha .menu-title, .cake .menu-title{
+  .tra-sua .menu-title,  .olong-matcha .menu-title, .cake .menu-title,.topping .menu-title {
     margin-top: 80px;
   }
 
@@ -421,6 +424,7 @@
   .box__event-img {
     width: 299px;
     height: 372px;
+    margin-left: 148px;
   }
   .box__event-desc,
   .box__desc-date,
@@ -452,9 +456,9 @@
     margin-left: 30px;
   }
   .form-mobile {
-    width: 358px;
+    width: 354px;
     height: 538px;
-    left: 8px;
+    left: 10px;
   }
   .content-mobile {
     margin-top: 10px;

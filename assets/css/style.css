@@ -165,6 +165,7 @@ justify-content: center;
     width: 467px;
     height: 588px;
     border-radius: 15px;
+    object-fit: cover;
 }
 /* event */
 .event{
