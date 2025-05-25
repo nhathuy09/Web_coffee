@@ -3,28 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Toán</title>
+    <!-- reset -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <!-- reset -->
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <!-- style -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- event css -->
-    <link rel="stylesheet" href="./assets/css/event.css" />
     <!-- responsive -->
     <link rel="stylesheet" href="./assets/css/responsive.css" />
-    <!-- AOS -->
-    <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
-    <title>Document</title>
+    <!-- css pay -->
+    <link rel="stylesheet" href="./assets/css/pay.css" />
   </head>
   <body>
     <!-- ===================header================= -->
     <div class="header">
       <!-- menu-bar -->
       <div class="menu-bar">
-        <img src="./assets/img/logo.png" alt="logo" class="logo logo-mobile" />
+        <img
+          src="./assets/img/logo.png"
+          alt="logo"
+          class="logo responsive-logo"
+        />
         <nav class="nav">
           <ul class="menu-bar__list" id="menu-list">
             <li class="menu-bar__link">
@@ -45,14 +46,14 @@
           <a href="./login.html" class="sign-in log">Sign In</a>
           <a href="./signup.html" class="sign-up log">Sign Up</a>
         </div>
-       <!-- cart-shopping -->
+        <!-- cart-shopping -->
         <div class="cart-shopping">
           <input type="checkbox" name="check-cart" id="check-cart" hidden />
           <label for="check-cart" class="cart-icon">
             <i class="fa-solid fa-cart-shopping"></i>
             <span id="cart-count">0</span>
           </label>
-          
+
           <label for="check-cart" class="cart-overlay"></label>
           <div id="display-cart">
             <h2>Giỏ Hàng</h2>
@@ -123,172 +124,124 @@
         </div>
       </div>
     </div>
+    <!--============main================= -->
+    <h1 class="title-box__pay">THANH TOÁN</h1>
+    <div class="box-pay">
+      <h2 class="info-customer">Thông tin khách hàng</h2>
+      <form action="" id="form-submit">
+        <label for="user" class="label">Tên người dùng:</label>
+        <input
+          type="text"
+          name="user"
+          id="name"
+          placeholder="Nhập tên người dùng"
+          required
+        />
+        <label for="email" class="label">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email-form"
+          placeholder="Nhập email"
+          required
+        />
+        <label for="sdt" class="label">Số điện thoại:</label>
+        <input
+          type="text"
+          name="sdt"
+          id="sdt"
+          placeholder="Nhập số điện thoại"
+          required
+        />
+        <h2 class="show-info__product">Thông tin sản phẩm</h2>
+        <div id="info-product"></div>
+        <div class="payment-options">
+             <label class="payment-option">
+            <input type="radio" name="payment" value="cash"  checked/>
+            <span>Tiền mặt</span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="bank" id="bank" />
+            <span>Ngân hàng (Quét mã QR)</span>
+          </label>
+         
+        </div>
+        <div id="qr-code">
+          <img
+            src="./assets/img/qr.JPG"
+            alt="QR Code"
+            style="max-width: 200px"
+          />
+          <p>Quét mã QR để thanh toán</p>
+        </div>
 
-    <!--Main  -->
-    <main>
-      <h2 class="heading-event">Tin Tức & Sự Kiện</h2>
-      <div class="main-event">
-        <div class="event-box">
-          <!-- item 1 -->
-          <div class="event-item">
-            <a href="#!">
-              <img src="./assets/img/matcha.jpg" alt="matcha" class="event-img"
-            /></a>
-            <p class="event-desc">
-              MACCHIATO CHO RA MẮT DÒNG SẢN PHẨM MỚI CÓ TÊN MACCHIATO DRAMA
-            </p>
-            <p class="desc-date">ON: 01/04/2025</p>
-            <p class="desc">Đây là dòng sản phẩm được lấy</p>
-            <span class="more-link">
-              <a href="#!">Xem thêm →</a>
-            </span>
-          </div>
-          <!-- item 2 -->
-          <div class="event-item">
-            <a href="#!">
-              <img
-                src="./assets/img/capuchino_coffe.jpg"
-                alt="Capuchino"
-                class="event-img"
-            /></a>
-            <p class="event-desc">
-              MỘT LY MACCHIATO VÀO BUỔI SÁNG GIÚP TỈNH TÁO VÀ THƯ GIÃN TRƯỚC KHI
-              BẮT ĐẦU CÔNG VIỆC
-            </p>
-            <p class="desc-date">ON:31/03/2025</p>
-            <p class="desc">Vào mỗi buổi sáng trước khi bắt đầu giờ làm</p>
-            <span class="more-link">
-              <a href="#!">Xem thêm →</a>
-            </span>
-          </div>
-          <!-- item 3 -->
-          <div class="event-item">
-            <a href="#!">
-              <img src="./assets/img/event1.jpg" alt="" class="event-img"
-            /></a>
-            <p class="event-desc">
-              NHÂN DỊP 30/4 GIẢM 10% CHO KHÁCH HÀNG KHI MUA MACCHIATO TẠI CỬA
-              HÀNG
-            </p>
-            <p class="desc-date">ON: 30/4/2025</p>
-            <p class="desc">Kỷ niệm 50 năm ngày thống nhất Đất Nước</p>
-            <span class="more-link">
-              <a href="#!">Xem thêm →</a>
-            </span>
-          </div>
-          <!-- item 4 -->
-          <div class="event-item">
-            <a href="#!">
-              <img src="./assets/img/when_cofffe.jpg" alt="" class="event-img"
-            /></a>
-            <p class="event-desc">
-              KHI NÀO CHÚNG TA NÊN THƯỞNG THỨC MACCHIATO ?
-            </p>
-            <p class="desc-date">ON: 24/03/2025</p>
-            <p class="desc">
-              Ai cũng muốn uống gì đó trong những lúc làm việc căng thẳng hay
-              stress
-            </p>
-            <span class="more-link">
-              <a href="#!">Xem thêm →</a>
-            </span>
-          </div>
-          <!-- item 5 -->
-          <div class="event-item">
-            <a href="#!">
-              <img
-                src="./assets/img/cake_with_coffee.jpg"
-                alt=""
-                class="event-img"
-            /></a>
-            <p class="event-desc">
-              THƯỞNG THỨC MACCHIATO CÙNG VỚI BÁNH TẠI SAO KHÔNG?
-            </p>
-            <p class="desc-date">ON: 22/03/2025</p>
-            <p class="desc">
-              Để thưởng thức một ly macchiato ngon tại sao các bạn không
-            </p>
-            <span class="more-link">
-              <a href="#!">Xem thêm →</a>
-            </span>
-          </div>
-          <!-- item 6 -->
-          <div class="event-item">
-            <a href="#!">
-              <img src="./assets/img/Why_coffee.jpg" alt="" class="event-img"
-            /></a>
-            <p class="event-desc">
-              TẠI SAO GIỚI TRẺ HIỆN NAY LẠI THÍCH UỐNG MACCHIATO?
-            </p>
-            <p class="desc-date">ON: 20/03/2025</p>
-            <p class="desc">
-              Giới trẻ hiện nay đang có xu hướng uống macchiato hơn trà sữa bởi
-              vì
-            </p>
-            <span class="more-link">
-              <a href="#!">Xem thêm →</a>
-            </span>
-          </div>
-        </div>
-        <div class="latest-posts">
-          <h2>Bài viết mới</h2>
-          <ul>
-            <li>
-              <a href="#!">
-                <p class="lp-desc">
-                  • MACCHIATO CHO RA MẮT DÒNG SẢN PHẨM MỚI CÓ TÊN MACCHIATO
-                  DRAMA
-                </p></a
-              >
-              <p class="post-date">01/04/2025</p>
-            </li>
-            <li>
-              <a href="#!">
-                <p class="lp-desc">
-                  • MỘT LY MACCHIATO VÀO BUỔI SÁNG GIÚP TỈNH TÁO VÀ THƯ GIÃN
-                  TRƯỚC KHI BẮT ĐẦU CÔNG VIỆC
-                </p></a
-              >
-              <p class="post-date">31/03/2025</p>
-            </li>
-            <li>
-              <a href="#!">
-                <p class="lp-desc">
-                  • NHÂN DỊP 26/03 GIẢM 10% CHO KHÁCH HÀNG KHI MUA MACCHIATO TẠI
-                  CỬA HÀNG
-                </p></a
-              >
-              <p class="post-date">26/03/2025</p>
-            </li>
-            <li>
-              <a href="#!"
-                ><p class="lp-desc">
-                  • KHI NÀO CHÚNG TA NÊN THƯỞNG THỨC MACCHIATO ?
-                </p></a
-              >
-              <p class="post-date">24/03/2025</p>
-            </li>
-            <li>
-              <a href="#!">
-                <p class="lp-desc">
-                  • THƯỞNG THỨC MACCHIATO CÙNG VỚI BÁNH TẠI SAO KHÔNG?
-                </p></a
-              >
-              <p class="post-date">22/03/2025</p>
-            </li>
-            <li>
-              <a href="#!">
-                <p class="lp-desc">
-                  • TẠI SAO GIỚI TRẺ HIỆN NAY LẠI THÍCH UỐNG MACCHIATO?
-                </p></a
-              >
-              <p class="post-date">20/03/2025</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </main>
-    <
+        <input type="submit" value="Thanh Toán" class="pay" />
+      </form>
+    </div>
+    <script src="./assets/js/menu.js"></script>
+    <script>
+      //hiển thị thông tin đơn hàng
+      console.log("Cart:", JSON.parse(localStorage.getItem("cart")));
+      console.log(cart);
+      const infoProduct = document.getElementById("info-product");
+      infoProduct.innerHTML = `
+  <ul class="box-info-list">
+    ${cart
+      .map(
+        (item, index) => `
+          <li class="list-item"> <img src="${item.image}" alt="${item.name}" class="img-info__pay"/> ${item.name || "Không có tên"} x${item.quantity || 1} - ${(
+          (item.price || 0) * (item.quantity || 1)
+        ).toLocaleString()} VNĐ</li>
+        `
+      )
+      .join("")}
+  </ul>
+  <p class="total-pay">Tổng cộng:  <span> ${cart
+        .reduce(
+          (total, item) => total + (item.price || 0) * (item.quantity || 1),
+          0
+        )
+        .toLocaleString()} VNĐ<span></p>
+ 
+`;
+
+      //hiển thị thanh toán
+      const payOptions = document.querySelectorAll('input[name ="payment"]');
+      const qr = document.getElementById("qr-code");
+      payOptions.forEach((option) => {
+        option.addEventListener("change", () => {
+          qr.style.display = option.value === "bank" ? "inline-block" : "none";
+        });
+      });
+      //thanh toán submit
+      const submit=document.getElementById("form-submit");
+      submit.addEventListener("submit",(e)=>{
+        e.preventDefault();
+       const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email-form").value.trim();
+        const phone = document.getElementById("sdt").value.trim();
+        const paymentMethod=document.querySelector(`input[name="payment"]:checked`).value;
+        if(!name ||!email || !phone){
+            alert(` Vui lòng nhập đầy đủ thông tin`)
+            return;
+        }
+        const order={
+            id: "Order"+ Date.now(),
+            cart:[...cart],
+            total:cart.reduce((total, item) => total + (item.price || 0) * (item.quantity || 1), 0).toLocaleString()+"VNĐ",
+            customer:[name,email,phone],
+            paymentMethod,
+        };
+        console.log(order);
+        localStorage.setItem("order", JSON.stringify(order));
+        localStorage.removeItem("cart");
+        alert( ` Thanh Toán Thành Công`);
+        window.location.href="./index.html";
+
+      })
+     
+    </script>
+     
     <!-- =================footer================ -->
     <footer class="footer">
       <div class="main-content">
@@ -398,11 +351,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- js animation -->
-    <script>
-      AOS.init();
-    </script>
-     <script src="./assets/js/menu.js"></script>
   </body>
 </html>

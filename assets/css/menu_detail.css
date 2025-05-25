@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    font-size: 4.7rem;
+    text-align: center;
+    font-family: 'Popins';
+    color: #123458 ;
+}
+.product-detail{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    
+}
+.img-menu{
+    width: 400px;
+    height: 410px;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+h2{
+    font-family: serif;
+    color: #123458;
+    font-weight: 600;
+
+}
+.price{
+    margin-top: -10px;
+    font-weight: 700;
+    color: #123458;
+    font-size: 1.8rem;
+}
+.desc{
+    margin-top: -10px;
+   width: 700px;
+   text-align: center;
+   font-family: 'popins';
+   color: #123458;
+   font-size: 1.8rem;
+   line-height: 1.68;
+}
+.buy-button{
+    width: 150px;
+    height: 40px;
+    font-family: serif;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-bottom: 100px;
+    transition: 0.3s;
+     background-color: #123458;
+    color: #fff;
+    
+}
+.buy-button:hover{
+    background-color:#fff ;
+    color:#123458;
+    border-color: #123458;
+}
+body{
+    position: relative;
+}
+.back-home{
+    font-family: serif;
+    position: absolute;
+    top: 233px;
+    left: 66px;
+    font-size: 2.6rem;
+    color: #123458;
+}
+.fa-arrow-left{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+.back-home:hover .fa-arrow-left{
+    animation: arrowLeft 3s infinite ;
+}
+@keyframes arrowLeft{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-20px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+

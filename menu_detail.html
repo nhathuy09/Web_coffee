@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/menu_detail.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
+    
+  </head>
+  <body>
+     <!-- ===================header================= -->
+    <div class="header">
+      <!-- menu-bar -->
+      <div class="menu-bar">
+        <img src="./assets/img/logo.png" alt="logo" class="logo logo-mobile" />
+        <nav class="nav">
+          <ul class="menu-bar__list" id="menu-list">
+            <li class="menu-bar__link">
+              <a href="./index.html">Home</a>
+            </li>
+            <li class="menu-bar__link">
+              <label for="menu"><a href="./about.html">About</a></label>
+            </li>
+            <li class="menu-bar__link">
+              <label for="menu"> <a href="./menu.html">Menu</a></label>
+            </li>
+            <li class="menu-bar__link">
+              <label for="menu"><a href="./event.html">Event</a></label>
+            </li>
+          </ul>
+        </nav>
+        <div class="log-in">
+          <a href="./login.html" class="sign-in log">Sign In</a>
+          <a href="./signup.html" class="sign-up log">Sign Up</a>
+        </div>
+       <!-- cart-shopping -->
+        <div class="cart-shopping">
+          <input type="checkbox" name="check-cart" id="check-cart" hidden />
+          <label for="check-cart" class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+          </label>
+          
+          <label for="check-cart" class="cart-overlay"></label>
+          <div id="display-cart">
+            <h2>Giỏ Hàng</h2>
+            <p>Chưa có sản phẩm trong giỏ hàng.</p>
+            <!-- Thêm nội dung giỏ hàng tại đây -->
+          </div>
+        </div>
+      </div>
+      <!-- tablet/mobile header -->
+
+      <div class="mobile-header">
+        <!-- tablet/mobile menu -->
+        <input
+          hidden
+          type="checkbox"
+          name="menu-checkbox"
+          id="menu-checkbox"
+          class="menu-checkbox"
+        />
+        <label for="menu-checkbox">
+          <svg
+            class="menu-header__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="currentcolor"
+              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+        </label>
+        <!-- overlay -->
+        <label for="menu-checkbox" class="menu-overlay"></label>
+        <!-- menu-content -->
+        <div class="menu-drawer">
+          <!-- menuTop -->
+          <div class="menu-drawer__top">
+            <!-- icon close menu -->
+            <label for="menu-checkbox">
+              <svg
+                class="close__menu"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="currentcolor"
+                  d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+                />
+              </svg>
+            </label>
+          </div>
+          <!-- nav mobile -->
+          <ul id="navbar__list--mobile"></ul>
+          <!-- sử dụng js để copy navbar -->
+          <script>
+            const navPc = document.querySelector("#menu-list");
+            const navMobile = document.querySelector("#navbar__list--mobile");
+            //sao chép
+            navMobile.innerHTML = navPc.innerHTML;
+          </script>
+          <!-- ngăn cách -->
+          <div class="separate"></div>
+          <!-- cta-action -->
+          <div class="show-login__mobile">
+            <a href="./login.html" class="sign-in log">Sign In</a>
+            <a href="./signup.html" class="sign-up log">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="./menu.html" class="back-home"> <i class="fa-solid fa-arrow-left" > </i>Trở về</a>
+    <h1>Chi tiết sản phẩm</h1>
+    <div class="product-detail" id="product-details"></div>
+    
+    <script src="./assets/js/menu.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+      const product = products.find((p) => p.id === id);
+      if (product) {
+        document.getElementById("product-details").innerHTML = `
+         <img src="${product.image}" alt="ảnh" class="img-menu">
+        <h2>${product.name}</h2>
+        <p class="price">${product.price.toLocaleString()} VNĐ</p>
+        <p class="desc">${product.description}</p>
+        <button class="buy-button" onclick="addToCart('${product.id}')">Mua</button>
+      `;
+      } else {
+        document.getElementById("product-details").innerHTML =
+          "<p>Sản phẩm không tìm thấy!</p>";
+      }
+    </script>
+     
+  </body>
+</html>

@@ -45,6 +45,21 @@
               <a href="./login.html" class="sign-in log">Sign In</a>
               <a href="./signup.html" class="sign-up log">Sign Up</a>
             </div>
+         <!-- cart-shopping -->
+        <div class="cart-shopping">
+          <input type="checkbox" name="check-cart" id="check-cart" hidden />
+          <label for="check-cart" class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+          </label>
+          
+          <label for="check-cart" class="cart-overlay"></label>
+          <div id="display-cart">
+            <h2>Giỏ Hàng</h2>
+            <p>Chưa có sản phẩm trong giỏ hàng.</p>
+            <!-- Thêm nội dung giỏ hàng tại đây -->
+          </div>
+        </div>
        </div>
          <!-- tablet/mobile header -->
  
@@ -137,7 +152,7 @@
             </a>
           </div>
           <div class="video__about-us">
-            <video autoplay loop>
+            <video autoplay loop muted>
               <source src="./assets/video/video1.mp4" type="video/mp4" />
             </video>
           </div>
@@ -309,5 +324,6 @@
     <script>
       AOS.init();
     </script>
+    <script src="./assets/js/menu.js"></script>
   </body>
 </html>

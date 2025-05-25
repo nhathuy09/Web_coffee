@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="box">
+    <input type="text" name="u" id="u">
+    <button id="btn">Click</button>
+</div>
+    <script>
+     
+        let btn=document.getElementById("btn");
+        btn.addEventListener("click",login);
+        function login(){
+            let u =document.getElementById("u").value;
+            localStorage.setItem("user",u);
+            localStorage.clear();
+        }
+    </script>
+</body>
+</html>

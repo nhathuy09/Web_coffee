@@ -1,0 +1,114 @@
+h1{
+    font-family: serif;
+    font-size: 4.6rem;
+    color: #AB886D;
+    text-align: center;
+    margin: 20px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.box-pay{
+    
+    width: 500px;
+    margin: 0 auto;
+}
+.show-info__product ,.info-customer{
+    font-family: serif;
+    font-size: 2rem;
+    line-height: 1.78;
+    color: #123458;
+    font-weight: 500;
+
+}
+.info-customer{
+    margin-bottom: 20px;
+}
+#form-submit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.label{
+    font-size: 1.7rem;
+    font-family: 'Popins';
+    color: #123458;
+}
+input{
+    padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+input:focus{
+    outline: none;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.payment-option {
+  display: flex;
+align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-direction: row-reverse;
+}
+.payment-option span {
+    width: 150px;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.payment-option:hover {
+  background: #e8e8e8;
+}
+#bank:checked ~ #qr-code{
+    display: inline-block;
+}
+/* thông tin sản phẩm */
+.box-info-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 350px;
+    overflow: auto;
+}
+.list-item{
+    font-family: serif;
+    line-height: 1.78;
+    color: #AB886D;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+.img-info__pay{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.total-pay{
+    border-top: 2px solid #123458;
+    margin-top: 30px;
+    font-size: 2rem;
+    font-family: 'popins';
+    padding: 20px;
+
+}
+
+.total-pay span{
+    color: #123458;
+    margin-left:70px;
+}
+
+

@@ -41,13 +41,13 @@
     <!-- mobile -->
     <div class="version-mobile">
         <img src="./assets/img/banner_coffe.jpg" alt="banner" class="version-mobile__img">
-        <form action="" class="form-mobile">
+        <form action="" class="form-mobile" method="post">
             <div class="content-mobile">
                  <p class="form-desc">Đăng nhập</p>
-                 <a href="./index.html" class="go-home"> <i class="fa-solid fa-arrow-left"></i> Về Trang Chủ</a>
+                 <a href="./index.html" class="go-home"> <i class="fa-solid fa-arrow-left" ></i> Về Trang Chủ</a>
             </div>
-             <input type="email" name="email" id="email" placeholder="Email/Số điện thoại/Tên đăng nhập">
-             <input type="password" name="password" id="password" placeholder="Mật khẩu">
+             <input type="email" name="email" id="email" placeholder="Email/Số điện thoại/Tên đăng nhập" required>
+             <input type="password" name="password" id="password" placeholder="Mật khẩu" required> 
              <input type="submit" value="Đăng nhập" class="submit-form">
              <a href="#!" class="forget-pass">Quên mật khẩu</a>
            
@@ -60,5 +60,6 @@
              <p class="new-login">Bạn mới biết đến Macchiato? <a href="./signup.html">Đăng ký</a></p>
          </form>
     </div>
+    <script src="./assets/js/login.js"></script>
 </body>
 </html>
