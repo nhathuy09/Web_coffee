@@ -28,7 +28,7 @@ const products = [
       "Tinh túy của hạt cà phê trong từng giọt. Hương thơm nồng nàn, vị đậm sâu, mang đến sự tỉnh táo tức thì.",
   },
   {
-    image: "./assets/img/capuchino.jpg",
+    image: "./assets/img/capuchino_coffe.jpg",
     id: "capuchino",
     name: "CAPUCHINO",
     price: 50000,
