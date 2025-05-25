@@ -379,7 +379,7 @@ iframe {
 
 /* /* css phần tử trong cart */
 .box-cart {
-  height: 50vh;
+  height: 35vh;
   overflow: auto;
   scroll-behavior: smooth;
 }
