@@ -7,6 +7,9 @@ h1{
     font-family: 'Popins';
     color: #123458 ;
 }
+li{
+list-style-type: none;
+}
 .product-detail{
     margin-left: 50px;
     display: flex;

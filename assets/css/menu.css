@@ -51,15 +51,14 @@ margin-top: 40px;
 }
 
 .products-zone {
-  display: grid;
-  row-gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-
+display: flex;
+flex-wrap: wrap;
+gap: 40px;
 }
 
 .product {
-  width: 350px;
-  height: 500px;
+  width: 300px;
+  height: 430px;
   justify-items: center;
 }
 

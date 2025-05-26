@@ -180,7 +180,7 @@ function addToCart(productId) {
     }
     saveCart();
     updateCartDisplay();
-    document.getElementById("check-cart").checked = true;
+    // document.getElementById("check-cart").checked = true;
   }
 }
 
